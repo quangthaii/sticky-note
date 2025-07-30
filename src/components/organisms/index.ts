@@ -1,1 +1,1 @@
-export { StickyNotesBoard } from './StickyNotesBoard';
+export * from './StickyNotesBoard';

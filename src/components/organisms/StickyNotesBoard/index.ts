@@ -1,1 +1,1 @@
-export { StickyNotesBoard } from './StickyNotesBoard';
+export { default as StickyNotesBoard } from './StickyNotesBoard';
