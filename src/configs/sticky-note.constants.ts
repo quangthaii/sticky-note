@@ -1,0 +1,44 @@
+export const STICKY_NOTE_CONFIG = {
+  DEFAULT_WIDTH: 200,
+  DEFAULT_HEIGHT: 200,
+  MIN_WIDTH: 150,
+  MIN_HEIGHT: 150,
+  MAX_WIDTH: 400,
+  MAX_HEIGHT: 400,
+
+  GRID_SIZE: 10,
+  SNAP_THRESHOLD: 15,
+
+  ANIMATION_DURATION: 300,
+  DRAG_ANIMATION_DURATION: 150,
+
+  Z_INDEX: {
+    BASE: 1,
+    ACTIVE: 100,
+    DRAGGING: 200,
+    TRASH_ZONE: 50,
+  },
+
+  COLORS: {
+    YELLOW: '#FFEB9C',
+    PINK: '#F7A8B8',
+    BLUE: '#9BB5FF',
+    GREEN: '#9CFEB5',
+    ORANGE: '#FFB347',
+    PURPLE: '#E6A8F7',
+  } as const,
+
+  STORAGE_KEY: 'sticky-notes',
+  AUTO_SAVE_INTERVAL: 2000, // 2 seconds
+
+  API_BASE_URL: '/api',
+  API_TIMEOUT: 5000,
+
+  TRASH_ZONE_SIZE: 80,
+  TRASH_ZONE_POSITION: { bottom: 20, right: 20 },
+
+  MIN_SCREEN_WIDTH: 1024,
+  MIN_SCREEN_HEIGHT: 768,
+} as const;
+
+export type StickyNoteColor = keyof typeof STICKY_NOTE_CONFIG.COLORS;
